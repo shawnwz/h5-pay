@@ -1,4 +1,6 @@
-import { Flex, FormControl, Input } from '@chakra-ui/react';
+import {
+  Button, Flex, FormControl, Input,
+} from '@chakra-ui/react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { H5PayRequest } from '@more/h5pay-types';
 
@@ -6,6 +8,7 @@ function H5Pay(): JSX.Element {
   const onSubmit: SubmitHandler<H5PayRequest> = async (req: H5PayRequest) => {
     console.log(req);
   };
+  const isH5PayLoading = false;
   const {
     register,
     handleSubmit,
@@ -33,6 +36,15 @@ function H5Pay(): JSX.Element {
             errorBorderColor="brand.orange"
           />
         </FormControl>
+        <Button
+          colorScheme="blue"
+          variant="solid"
+          type="submit"
+          isLoading={isH5PayLoading}
+          isDisabled={!isValid}
+        >
+          PAY
+        </Button>
 
       </form>
 

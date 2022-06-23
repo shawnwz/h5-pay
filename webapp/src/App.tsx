@@ -2,7 +2,7 @@
  * IMPORTS
  */
 
-import { Box, Center, Flex } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import H5Pay from './components/h5pay/H5Pay';
 
 /**
