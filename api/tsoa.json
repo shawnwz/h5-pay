@@ -8,6 +8,7 @@
     "specVersion": 3
   },
   "routes": {
+    "basePath": "/api",
     "routesDir": "src/controllers"
   }
 }

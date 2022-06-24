@@ -7,19 +7,24 @@ export interface H5PayRequest {
   scene_info: SceneInfo,
 }
 
-interface Amount {
+export interface Amount {
   total: number,
   currency: string,
 }
 
-interface SceneInfo {
+export interface SceneInfo {
   payer_client_ip: string,
   device_id: string,
   h5_info: H5Info,
 }
 
-interface H5Info {
+export interface H5Info {
   type: string,
   app_name: string,
   app_url: string,
+}
+
+export interface H5PayResponse {
+  status: string,
+  h5_url: string,
 }

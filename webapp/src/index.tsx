@@ -5,16 +5,23 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from './theme';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 /**
  * CORE
  */
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </QueryClientProvider>
   </StrictMode>,
   document.getElementById('root'),
 );
