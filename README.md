@@ -15,7 +15,7 @@ This repo contains the frontend and backend of the H5 pay.
 ## Getting Started
 
 1. Clone the repo.
-2. Create file ```.env``` and populate with values required.
+2. Create file ```/api/.env``` and populate with values required.
 3. ```yarn install```
 4. ```yarn build```
 5. ```yarn dev```
