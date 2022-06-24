@@ -14,8 +14,9 @@ RUN yarn install --frozen-lockfile && yarn build
 
 # RUN
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/api
 
-ENV NODE_ENV=$NODE_ENV
+ENV NODE_ENV=development
+ENV WEBAPP_ROOT=/usr/src/app/webapp/build
 
 CMD [ "node", "./build/index.js" ]

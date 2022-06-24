@@ -65,4 +65,4 @@ export const devOnly = <T>(value: T): T | undefined => (isDev ? value : undefine
 
 export const port = getNumberEnvVar('PORT', 8080);
 
-export const webappRoot = isProd && getEnvVar('WEBAPP_ROOT');
+export const webappRoot = getEnvVar('WEBAPP_ROOT');
