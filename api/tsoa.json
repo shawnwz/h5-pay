@@ -10,5 +10,8 @@
   "routes": {
     "basePath": "/api",
     "routesDir": "src/controllers"
-  }
+  },
+  "ignore": [
+    "**/node_modules/**"
+  ]
 }

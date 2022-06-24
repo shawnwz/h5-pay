@@ -11,7 +11,7 @@ function H5Pay(): JSX.Element {
     onSuccess: (res) => {
       console.log(res);
       console.log(res.h5_url);
-      window.location.href = res.h5_url || '';
+      window.location.replace(res.h5_url);
     },
     onError: (err) => {
       console.log(err);
@@ -70,7 +70,6 @@ function H5Pay(): JSX.Element {
           <FormLabel>Attach</FormLabel>
           <Input
             {...register('attach')}
-            required
             size="lg"
             width="100"
             borderColor="brand.purple"
