@@ -41,10 +41,6 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.get('/re', (req, res) => {
-  res.redirect('https://www.baidu.com');
-});
-
 app.use('/docs', swaggerUi.serve, async (_req: ExRequest, res: ExResponse) => res.send(
   swaggerUi.generateHTML(await import('./controllers/swagger.json')),
 ));

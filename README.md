@@ -20,6 +20,15 @@ This repo contains the frontend and backend of the H5 pay.
 4. ```yarn build```
 5. ```yarn dev```
 
+Try http://localhost:3000/?total=100&attach=TEST
+
+`total` is amount in CNY, 100 = 1 Yuan.
+
+`attach` is a self defined string which will be included in the callback req from Wechat.
+
+## Docker Build and Run
+1. ```docker build --platform linux/amd64 --build-arg H5_PAY_NOTIFY_URL=http://test.aibmore.cn/notify  -t h5pay .```
+2. ```docker run -p 8080:8080 --name h5pay -e WXPAY_APPID=xxx -e WXPAY_MCHID=xxx -e NODE_ENV=development -d h5pay```
 ## Documentation
 
 To access the full swagger docs use the backend endpoint [http://localhost:8080/docs/#/](http://localhost:8080/docs/#/).
